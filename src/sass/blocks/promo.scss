@@ -1,4 +1,5 @@
 .promo {
+  position: relative;
   padding-top: 50px;
 
   &__wrapper {
@@ -23,6 +24,10 @@
   &__btn {
     margin: 18px auto 0;
   }
+
+  &__potter {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -46,6 +51,23 @@
     &__img {
       width: 230px;
       height: 321px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .promo {
+    &__potter {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 450px;
+      height: 633px;
+    }
+
+    &__title {
+      padding-left: 571px;
     }
   }
 }
