@@ -15,7 +15,7 @@
   }
 
   &__text {
-    margin-top: 20px;
+    margin-block-start: 20px;
     font-weight: 400;
     font-size: 16px;
     color: $dark;
@@ -38,7 +38,7 @@
     }
 
     &__text {
-      margin-top: 25px;
+      margin-block-start: 25px;
       font-size: 20px;
     }
   }
@@ -62,7 +62,7 @@
 
     &__text {
       &_fixed {
-        width: 556px;
+        inline-size: 556px;
       }
     }
   }
@@ -73,7 +73,7 @@
     padding-top: 100px;
 
     &__text {
-      margin-top: 30px;
+      margin-block-start: 30px;
     }
   }
 }
