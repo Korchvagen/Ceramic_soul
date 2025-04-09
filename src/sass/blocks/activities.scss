@@ -1,0 +1,29 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.activities {
+  padding-top: 60px;
+
+  &__wrapper {
+    margin-top: 20px;
+    row-gap: 40px;
+  }
+
+  &__img {
+    margin-top: 40px;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  &__text {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    color: $dark;
+    font-style: normal;
+    line-height: normal;
+
+    &_highlighted {
+      font-weight: 500;
+      color: $ceramic;
+    }
+  }
+}
