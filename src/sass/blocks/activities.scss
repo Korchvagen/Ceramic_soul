@@ -61,12 +61,19 @@
     }
 
     &__text {
-      margin-top: 25px;
-      font-size: 20px;
-
       &_fixed {
         width: 556px;
       }
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .activities {
+    padding-top: 100px;
+
+    &__text {
+      margin-top: 30px;
     }
   }
 }
