@@ -1,0 +1,168 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.contact {
+  padding-top: 60px;
+
+  &__wrapper {
+    margin-top: 59px;
+  }
+
+  &__img {
+    display: none;
+  }
+
+  &__fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__label {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    color: $dark;
+
+    &:nth-child(2) {
+      margin-top: 8px;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    height: 48px;
+    border: 1px solid #e2e1e5;
+    border-radius: 2px;
+    padding: 10px 15px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    color: $dark;
+    background-color: #fff;
+
+    &::placeholder {
+      color: $ui-disabled;
+    }
+
+    &:hover {
+      border-color: $dark;
+    }
+
+    &:focus {
+      border: none;
+      outline: 1px solid $dark;
+    }
+  }
+
+  &__textarea {
+    height: 132px;
+    resize: none;
+  }
+
+  &__check-block {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+
+    a {
+      color: #a22dc6;
+      text-decoration: none;
+      margin-left: 2px;
+    }
+  }
+
+  &__checkbox {
+    margin-right: 15px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid $dark;
+    border-radius: 2px;
+  }
+
+  &__btn {
+    margin-top: 20px;
+  }
+
+  // &__form {
+  //   position: relative;
+
+  //   img {
+  //     display: none;
+  //     position: absolute;
+  //     right: 0;
+  //     bottom: 0;
+  //     width: 85px;
+  //     height: 85px;
+  //   }
+  // }
+}
+
+@media screen and (min-width: 768px) {
+  .contact {
+    padding-left: 24px;
+
+    &__wrapper {
+      margin-top: 45px;
+    }
+
+    &__form {
+      img {
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact {
+    padding-left: 0;
+
+    &__wrapper {
+      margin-top: 80px;
+    }
+
+    &__img {
+      display: block;
+      width: 550px;
+      height: 342px;
+      box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &__col:nth-child(2) {
+      padding-left: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .contact {
+    padding-top: 100px;
+
+    &__wrapper {
+      margin-top: 80px;
+    }
+
+    &__img {
+      height: 356px;
+    }
+
+    &__col:first-child {
+      padding-right: 0;
+    }
+
+    &__col:nth-child(2) {
+      padding-left: 147px;
+      padding-right: 75px;
+    }
+
+    &__form {
+      height: 356px;
+
+      img {
+        display: block;
+      }
+    }
+  }
+}
