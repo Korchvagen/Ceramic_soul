@@ -6,6 +6,16 @@ import 'swiper/css/pagination';
 
 import "/src/sass/style.scss";
 
+const burger = document.querySelector(".burger"),
+  menu = document.querySelector(".header__menu"),
+  body = document.querySelector("body");
+
+burger.addEventListener("click", () => {
+  menu.classList.toggle("header__menu_active");
+  burger.classList.toggle("burger_active");
+  body.classList.toggle("active");
+});
+
 try {
   new Swiper('.works__slider', {
     loop: true,

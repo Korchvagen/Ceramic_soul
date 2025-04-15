@@ -31,6 +31,37 @@
   &__nav {
     display: none;
   }
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    padding: 114px 20px 50px 24px;
+    background-color: $light;
+    transition: transform 0.5s;
+
+    &_active {
+      transform: translateX(100%);
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      padding-left: 0;
+      list-style-type: none;
+    }
+
+    a {
+      font-weight: 400;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: $dark;
+      text-decoration: none;
+    }
+  }
 }
 
 .burger {
@@ -48,6 +79,7 @@
     width: 20px;
     height: 1px;
     background-color: $dark;
+    transition: all 0.5s;
   }
 
   &::before,
@@ -59,6 +91,7 @@
     width: 20px;
     height: 1px;
     background-color: $dark;
+    transition: all 0.5s;
   }
 
   &::before {
@@ -67,6 +100,22 @@
 
   &::after {
     bottom: 0;
+  }
+
+  &_active {
+    span {
+      display: none;
+    }
+
+    &::before {
+      top: 45%;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      bottom: 50%;
+      transform: rotate(-45deg);
+    }
   }
 }
 
@@ -93,6 +142,10 @@
       font-style: normal;
       line-height: normal;
       text-decoration: none;
+    }
+
+    &__menu {
+      display: none;
     }
   }
 
