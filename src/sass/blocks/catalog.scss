@@ -1,0 +1,177 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.catalog {
+  padding-top: 50px;
+  padding-bottom: 60px;
+
+  &__title {
+    margin-top: 60px;
+  }
+
+  &__tabs {
+    display: flex;
+    column-gap: 50px;
+    row-gap: 13px;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    border: 1px solid $dark;
+    padding: 13px 25px;
+  }
+
+  &__tab {
+    position: relative;
+    padding: 0;
+    border: none;
+    background: none;
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+
+    &_active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 100%;
+      height: 1px;
+      background-color: #000;
+    }
+  }
+
+  &__content {
+    margin-top: 60px;
+  }
+
+  &__content-item {
+    display: none;
+
+    &_active {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+
+  &__card {
+    width: 340px;
+    min-height: 275px;
+    background-color: $light;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+    margin: 0 auto;
+  }
+
+  &__card-img {
+    width: 100%;
+    height: 198px;
+    object-fit: cover;
+  }
+
+  &__card-info {
+    border: 1px solid #000;
+    border-top: none;
+    padding: 11px 12px 16.5px;
+  }
+
+  &__card-title {
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
+    line-height: 21px;
+  }
+
+  &__card-price {
+    margin-top: 7.7px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
+    line-height: 21px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .catalog {
+    &__tabs {
+      width: 460px;
+    }
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .catalog {
+    &__card {
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .catalog {
+    &__content-item {
+      position: relative;
+      padding: 10px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 200px;
+        height: 200px;
+        border-top: 1px solid $dark;
+        border-left: 1px solid $dark;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .catalog {
+    &__content-item {
+      padding: 25px;
+      justify-content: start;
+      gap: 35px;
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .catalog {
+    padding-top: 40px;
+    padding-bottom: 100px;
+
+    &__title {
+      margin-top: 100px;
+    }
+
+    &__content-item {
+      column-gap: 83px;
+      row-gap: 25px;
+    }
+
+    &__card {
+      width: 285px;
+      min-height: 250px;
+    }
+
+    &__card-img {
+      height: 180px;
+    }
+
+    &__card-info {
+      padding: 10px 10px 15px;
+    }
+
+    &__card-title {
+      line-height: 19px;
+    }
+
+    &__card-price {
+      margin-top: 7px;
+      line-height: 19px;
+    }
+  }
+}

@@ -42,3 +42,20 @@ try {
     modules: [Navigation, Pagination]
   });
 } catch (e) { }
+
+try {
+  const tabs = document.querySelectorAll(".catalog__tab");
+  const contents = document.querySelectorAll(".catalog__content-item");
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => {
+      tabs.forEach((t) => t.classList.remove("catalog__tab_active"));
+      contents.forEach((c) => (c.classList.remove("catalog__content-item_active")));
+
+      tab.classList.add("catalog__tab_active");
+      contents[index].classList.add("catalog__content-item_active");
+    });
+  });
+
+  contents.forEach((c, i) => (i === 0 ? c.classList.add("catalog__content-item_active") : c.classList.remove("catalog__content-item_active")));
+} catch (e) { }

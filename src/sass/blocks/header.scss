@@ -41,6 +41,7 @@
     padding: 114px 20px 50px 24px;
     background-color: $light;
     transition: transform 0.5s;
+    z-index: 500;
 
     &_active {
       transform: translateX(100%);
@@ -69,6 +70,7 @@
   width: 20px;
   height: 20px;
   padding-right: 55px;
+  z-index: 1000;
 
   span {
     display: block;
