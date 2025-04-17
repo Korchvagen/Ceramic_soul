@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Website for Ceramic soul brand" />
+  <meta name="author" content="Awesome student" />
+  <title>Blog</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;1,400&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <section class="about">
+    <div class="container">
+      <header class="header">
+        <nav class="header__menu">
+          <ul>
+            <li><a href="#" class="header__menu-link">catalog</a></li>
+            <li><a href="#" class="header__menu-link">blog</a></li>
+            <li><a href="#" class="header__menu-link">about</a></li>
+          </ul>
+        </nav>
+        <div class="header__top">
+          <div class="burger">
+            <span></span>
+          </div>
+          <a href="#" class="header__logo">
+            <img src="/src/logo/logo.png" alt="logo">
+          </a>
+          <div class="header__icons">
+            <a href="#">
+              <span class="icon-search"></span>
+            </a>
+            <a href="#">
+              <span class="icon-shopping-bag"></span>
+            </a>
+          </div>
+        </div>
+        <nav class="header__nav">
+          <ul>
+            <li><a href="#" class="header__link">catalog</a></li>
+            <li><a href="#" class="header__link">blog</a></li>
+            <li><a href="#" class="header__link">about</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <h1 class="title-h1 about__title">where it all began</h1>
+
+      <div class="about__wrapper pure-g">
+        <div class="about__column-img pure-u-1 pure-u-xl-1-2">
+          <img src="/src/img/about/about.jpg" alt="about">
+        </div>
+        <div class="about__column-text pure-u-1 pure-u-xl-1-2">
+          Our small pottery workshop began as a simple passion project, rooted in a love for handmade artistry and
+          traditional
+          craftsmanship. What started with a single wheel and a few lumps of clay has grown into a cozy creative space
+          where ideas
+          take shape and stories are told through every piece. Inspired by timeless techniques and the beauty of natural
+          materials, we’ve built a place where both beginners and experienced artists can come together, share their
+          skills, and
+          celebrate the art of pottery. Each creation reflects our journey—shaped by hand, fired with care, and made to
+          be
+          cherished.<br><br>Over the years, our workshop has become more than just a place to create—it’s a community.
+          Friends, families, and
+          curious visitors gather here to learn, connect, and experience the joy of working with clay. From intimate
+          masterclasses
+          to collaborative projects, we believe in the power of handmade art to bring people together and spark
+          creativity in
+          unexpected ways.<br><br>Every piece that leaves our studio carries a bit of our story, blending tradition with
+          personal expression. Whether it’s
+          a simple cup or an intricate vase, our ceramics are crafted to be both beautiful and functional, adding warmth
+          and
+          authenticity to any space.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="container">
+      <h2 class="title-h2">get in touch</h2>
+      <div class="contact__wrapper pure-g">
+        <div class="pure-u-1 pure-u-xl-1-2 pure-u-xxl-2-5">
+          <img src="/src/img/contact/tea.jpg" alt="tea" class="contact__img">
+        </div>
+        <div class="pure-u-1 pure-u-xl-1-2 pure-u-xxl-3-5">
+          <form action="#" class="contact__form">
+            <fieldset class="contact__fieldset">
+              <div class="contact__input-block">
+                <label class="contact__label" for="name">Name</label>
+                <input required class="contact__input" type="text" id="name" name="name" placeholder="Name">
+              </div>
+              <div class="contact__input-block">
+                <label class="contact__label" for="email">Email</label>
+                <input required class="contact__input" type="email" id="email" name="email" placeholder="Email">
+              </div>
+            </fieldset>
+
+            <label class="contact__label" for="question">Your question</label>
+            <textarea class="contact__textarea" name="question" id="question" placeholder="Question"></textarea>
+
+            <label class="contact__label contact__check-block" for="checkbox">
+              <input required required class="contact__checkbox" type="checkbox" id="checkbox" name="checkbox">
+              I agree with the
+              <a href="#">terms</a>
+            </label>
+
+            <button class="contact__btn btn-send">send request</button>
+            <img src="/src/img/contact/vase.png" alt="vase" class="contact__img-form">
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="findus">
+    <div class="container">
+      <h2 class="title-h2 findus__title">find us</h2>
+
+      <div class="findus__wrapper">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4094.286717492937!2d-73.95171882307056!3d40.72961057139102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2593c58f8777d%3A0xe2215ac687bd7249!2sCLAY%20SPACE%20Ceramic%20Center!5e1!3m2!1sru!2sby!4v1744889432589!5m2!1sru!2sby"
+          style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrapper">
+        <div class="footer__newsletter">
+          <h2 class="footer__header">newsletter</h2>
+          <div class="footer__cta">Keep up to date with news and promotions</div>
+          <form action="#" class="footer__form">
+            <input required class="footer__input" type="email" id="email" name="email" placeholder="Enter your e-mail">
+            <label class="footer__label footer__check-block" for="footer-checkbox">
+              <input required required class="footer__checkbox" type="checkbox" id="footer-checkbox" name="checkbox">
+              I agree with the
+              <a href="#">terms</a>
+            </label>
+            <button class="footer__btn btn-submit">submit</button>
+          </form>
+        </div>
+
+        <nav class="footer__nav">
+          <div class="footer__nav-item">
+            <h4 class="footer__header">discover</h4>
+            <ul class="footer__list-links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-item">
+            <h4 class="footer__header">shopping</h4>
+            <ul class="footer__list-links">
+              <li><a href="#">Catalog</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-item">
+            <h4 class="footer__header">information</h4>
+            <ul class="footer__list-links">
+              <li><a href="#">Terms and Conditions</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="footer__follow">
+          <h4 class="footer__header">follow us</h4>
+          <ul class="footer__list-socials">
+            <li><a href="#"><span class="icon-facebook"></span></a></li>
+            <li><a href="#"><span class="icon-instagram"></span></a></li>
+            <li><a href="#"><span class="icon-pinterest"></span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__copyright">© Copyright 2025, Ceramic soul</div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/js/script.js"></script>
+</body>
+
+</html>
