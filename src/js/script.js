@@ -3,6 +3,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import JustValidate from 'just-validate';
 
 import "/src/sass/style.scss";
 
@@ -59,3 +60,78 @@ try {
 
   contents.forEach((c, i) => (i === 0 ? c.classList.add("catalog__content-item_active") : c.classList.remove("catalog__content-item_active")));
 } catch (e) { }
+
+try {
+  const contactFormValidator = new JustValidate('.contact__form');
+
+  contactFormValidator
+    .addField('#name', [
+      {
+        rule: 'required',
+        errorMessage: 'Please fill the name!',
+      },
+      {
+        rule: 'minLength',
+        value: 2,
+        errorMessage: 'Min 2 char!',
+      }
+    ])
+    .addField('#email', [
+      {
+        rule: 'required',
+        errorMessage: 'Please fill the email!',
+      },
+      {
+        rule: 'email',
+      }
+    ]).addField('#question', [
+      {
+        rule: 'required',
+        errorMessage: 'Please fill the question!',
+      },
+      {
+        rule: 'minLength',
+        value: 5,
+        errorMessage: 'Min 5 char!',
+      }
+    ], {
+      errorsContainer: document.querySelector('.question-error-message'),
+    })
+    .addField('#checkbox', [
+      {
+        rule: 'required',
+        errorMessage: 'Please check the checkbox!',
+      },
+    ], {
+      errorsContainer: document.querySelector('.checkbox-error-message'),
+    });
+} catch (e) {
+
+}
+
+try {
+  const footerFormValidator = new JustValidate('.footer__form');
+
+  footerFormValidator
+    .addField('#footer__email', [
+      {
+        rule: 'required',
+        errorMessage: 'Please fill the email!',
+      },
+      {
+        rule: 'email',
+      }
+    ], {
+      errorsContainer: document.querySelector('.footer-email-error'),
+    })
+    .addField('#foote__checkbox', [
+      {
+        rule: 'required',
+        errorMessage: 'Please check the checkbox!',
+      },
+    ], {
+      errorsContainer: document.querySelector('.footer-checkbox-error'),
+    });
+} catch (e) {
+
+}

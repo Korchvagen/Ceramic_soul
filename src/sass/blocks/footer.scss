@@ -55,6 +55,14 @@
     }
   }
 
+  .just-validate-error-field {
+    border-bottom: 1px solid $ui-error;
+
+    &::placeholder {
+      color: $ui-error;
+    }
+  }
+
   &__check-block {
     display: flex;
     align-items: center;
