@@ -32,6 +32,23 @@ img {
   max-inline-size: 100%;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: $dark;
+  -webkit-box-shadow: 0 0 0px 40rem $light inset;
+}
+
+footer {
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus {
+    -webkit-text-fill-color: $light;
+    -webkit-box-shadow: 0 0 0px 40rem $dark inset;
+  }
+}
+
+
 html {
   font-family: "Barlow", sans-serif;
   scroll-behavior: smooth;
